@@ -22,9 +22,9 @@ app.get('/order', function(req, res) {
 	var name = req.params.name;
 	res.render("OrderOnline.html");
 });
-
 app.get('/', getHtml);
 app.get('/formsubmit',fileWorker.formsubmit);
+app.get('/getData',fileWorker.getData);
 var server = app.listen(2121, function() {
 
 	var host = server.address().address;

@@ -7,8 +7,8 @@ $(document).ready(
 						Location = "Thiruvanmayur";
 						if ((x == "Adayar") || (x == "Thiruvanmayur")
 								|| (x == "Guindy")) {
-							$("#LocationDisplay").html("You selected: "
-									+ x + " your near by Location is "
+							$("#LocationDisplay").html("You have selected: "
+									+ x + ", your near by Location is "
 									+ Location);
 
 						}
@@ -16,17 +16,17 @@ $(document).ready(
 						else if ((x == "Kanthansavadi") || (x == "MgrNagar")
 								|| (x == "Taramani")) {
 							Location = "Kanthansavadi";
-							$("#LocationDisplay").html("You selected: "+ x +"  your near by Location is"+ Location);
+							$("#LocationDisplay").html("You have selected: "+ x +",  your near by Location is "+ Location);
 
 						} else if ((x == "Thoraipakkam") || (x == "ECR")
 								|| (x == "OMR")) {
 							Location = "Thoraipakkam";
-							$("#LocationDisplay").html("You selected: "+ x + " your near by Location is"+ Location);
+							$("#LocationDisplay").html("You have selected: "+ x + ", your near by Location is "+ Location);
 
 						} else if ((x == "Kovilambakkam") || (x == "Tambaram")
 								|| (x == "Medavakkam")) {
 							Location = "Kovilambakkam";
-							$("#LocationDisplay").html("You selected: "+ x + " your near by Location is"+ Location);
+							$("#LocationDisplay").html("You have selected: "+ x + ", your near by Location is "+ Location);
 
 						}
 

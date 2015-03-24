@@ -185,11 +185,36 @@ to {
 	text-align: center;
 }
 
+#ContentDisplay_1 {
+	border: 2px solid;
+	height: 370;
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
 #ContentDisplay {
 	border: 2px solid;
 	height: 370;
+	width: 669;
+	display: inline-block;
+	vertical-align: top;
 }
 
 #usrform {
 	text-align: center;
+}
+
+table,th,td {
+	border: 1px solid grey;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+table tr:nth-child(odd) {
+	background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+	background-color: #ffffff;
 }

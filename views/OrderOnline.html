@@ -1,54 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script
-	src="https://maps.googleapis.com/maps/api/js?sensor=AIzaSyCpzJ4Xd_6DFmbn94ghRTrceMg31C1CRcg"></script>
-
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/Cascading.css" />
 <script src="/js/Myfunction.js"></script>
-</head>
-<body>
-	<div class="AvailableKM">
-		<marquee behavior="scroll" direction="left">Door Delivery is
-			available for 5Kms from the location</marquee>
-	</div>
-	<div class="Locations">
-		<form name="myform" action="http://www.mydomain.com/myformhandler.cgi"
-			method="POST">
-			<div align="center">
-				<select name="mydropdown" id="mydropdown">
-					<option>SelectYourArea</option>
-					<option value="Thiruvanmayur">Thiruvanmayur</option>
-					<option value="Adayar">Adayar</option>
-					<option value="Guindy">Guindy</option>
-					<option value="Kanthansavadi">Kanthansavadi</option>
-					<option value="MgrNagar">MgrNagar</option>
-					<option value="Taramani">Taramani</option>
-					<option value="Thoraipakkam">Thoraipakkam</option>
-					<option value="ECR">ECR</option>
-					<option value="OMR">OMR</option>
-					<option value="Kovilambakkam">Kovilambakkam</option>
-					<option value="Tambaram">Tambaram</option>
-					<option value="Medavakkam">Medavakkam</option>
-				</select>
-			</div>
-		</form>
-	</div>
-	<div id="LocationDisplay"></div>
-	<div id="ContentDisplay">
-		<form action="" id="usrform">
-			<p>chicken65</p>
-			Quantity:<input type="number" name="qty_1" id="Q1"><label id="lq1"></label>
-			<p>prawnfry </p>
-			Quantity: <input type="number" name="qty_2" id="Q2"> <label id="lq2"></label> 
-			<p>muttonbriyani </p>
-			Quantity: <input type="number" name="qty_3" id="Q3"><label id="lq3"></label> 
-			<p>Total:</p><label id="tq"></label><br>
-			<input type="submit">
-		</form>
-	</div>
-</body>
+<div class="AvailableKM">
+	<marquee behavior="scroll" direction="left">Door Delivery is
+		available for 5Kms from the location</marquee>
+</div>
+<div class="Locations">
+	<form name="myform" action="http://www.mydomain.com/myformhandler.cgi"
+		method="POST">
+		<div align="center">
+			<select name="mydropdown" id="mydropdown">
+				<option>SelectYourArea</option>
+				<option value="Thiruvanmayur">Thiruvanmayur</option>
+				<option value="Adayar">Adayar</option>
+				<option value="Guindy">Guindy</option>
+				<option value="Kanthansavadi">Kanthansavadi</option>
+				<option value="MgrNagar">MgrNagar</option>
+				<option value="Taramani">Taramani</option>
+				<option value="Thoraipakkam">Thoraipakkam</option>
+				<option value="ECR">ECR</option>
+				<option value="OMR">OMR</option>
+				<option value="Kovilambakkam">Kovilambakkam</option>
+				<option value="Tambaram">Tambaram</option>
+				<option value="Medavakkam">Medavakkam</option>
+			</select>
+		</div>
+	</form>
+</div>
+<div id="LocationDisplay"></div>
+<script src="/js/controllers.js">
+	/* var app = angular.module('App', []).controller('customersCtrl',
+			function($scope, $http) {
+				$http.get("/getData").success(function(response) {
 
-</html>
+					$scope.names = response;
+				});
+			}); */
+
+
+</script>
+<div id="ContentDisplay_1" ng-app="App" ng-controller="customersCtrl">
+	<table>
+		<tr ng-repeat="x in names | orderBy : 'Country'">
+			<td>{{ x.Location }}</td>
+			<td>{{ x.chicken65 }}</td>
+		</tr>
+	</table>
+</div>
+
+<div id="ContentDisplay">
+	<form action="" id="usrform">
+		<p>chicken65</p>
+		Quantity:<input type="number" name="qty_1" id="Q1"><label
+			id="lq1"></label>
+		<p>prawnfry</p>
+		Quantity: <input type="number" name="qty_2" id="Q2"> <label
+			id="lq2"></label>
+		<p>muttonbriyani</p>
+		Quantity: <input type="number" name="qty_3" id="Q3"><label
+			id="lq3"></label>
+		<p>Total:</p>
+		<label id="tq"></label><br> <input type="submit">
+	</form>
+</div>
