@@ -117,8 +117,7 @@ body {
 	font-size: 20;
 }
 
-@
--webkit-keyframes mymove {
+@-webkit-keyframes mymove {
 	from {top: 0px;
 	color: white;
 }
@@ -129,8 +128,7 @@ to {
 }
 
 }
-@
--moz-keyframes mymove {
+@-moz-keyframes mymove {
 	from {top: 0px;
 	color: white;
 }
@@ -199,22 +197,35 @@ to {
 	width: 669;
 	display: inline-block;
 	vertical-align: top;
+	font-family: cursive;
+  	font-weight: bolder;
+  	
 }
-
 #usrform {
 	text-align: center;
+	margin-top: 30;
+}
+#usrform p {
+	
 }
 
 table,th,td {
-	border: 1px solid grey;
+	border: 1px solid black;
 	border-collapse: collapse;
-	padding: 5px;
+	padding: 10px;
+  	margin-left: 100px;
+  	margin-top:20px;
 }
 
-table tr:nth-child(odd) {
+table th {
 	background-color: #f1f1f1;
 }
-
-table tr:nth-child(even) {
-	background-color: #ffffff;
+#QtyAvailable{
+  margin:12px;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: medium;
 }
+/* table tr:nth-child(even) {
+	background-color: #ffffff;
+} */

@@ -4,8 +4,7 @@
 		available for 5Kms from the location</marquee>
 </div>
 <div class="Locations">
-	<form name="myform" action="http://www.mydomain.com/myformhandler.cgi"
-		method="POST">
+	<form name="myform" method="POST">
 		<div align="center">
 			<select name="mydropdown" id="mydropdown">
 				<option>SelectYourArea</option>
@@ -26,26 +25,24 @@
 	</form>
 </div>
 <div id="LocationDisplay"></div>
-<script src="/js/controllers.js">
-	/* var app = angular.module('App', []).controller('customersCtrl',
-			function($scope, $http) {
-				$http.get("/getData").success(function(response) {
+<div id="ContentDisplay_1" ng-controller="customersCtrl">
 
-					$scope.names = response;
-				});
-			}); */
-
-
-</script>
-<div id="ContentDisplay_1" ng-app="App" ng-controller="customersCtrl">
+	<p id="QtyAvailable">Quantity Available</p>
 	<table>
-		<tr ng-repeat="x in names | orderBy : 'Country'">
+		<tr>
+			<th>Location</th>
+			<th>Chicken65</th>
+			<th>Prawnfry</th>
+			<th>Muttonbriyani</th>
+		</tr>
+		<tr ng-repeat="x in names">
 			<td>{{ x.Location }}</td>
 			<td>{{ x.chicken65 }}</td>
+			<td>{{ x.prawnfry }}</td>
+			<td>{{ x.muttonbriyani }}</td>
 		</tr>
 	</table>
 </div>
-
 <div id="ContentDisplay">
 	<form action="" id="usrform">
 		<p>chicken65</p>
